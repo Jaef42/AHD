@@ -1,0 +1,66 @@
+.btn {
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    color:  #192c07;
+    transition: all 1000ms;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid  #192c07;
+  }
+  
+  .btn:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid  #b9ea6c;
+    box-shadow: 4px 5px 17px -4px #268391;
+  }
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #609b15;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+  }
+  
+  .btn:hover::before {
+    width: 250%;
+  }
+  .container-boton{
+    display: flex;
+    justify-content: center;
+
+  }
+  .menu2, .servicio, .galeriaa{
+    padding-top: 60px;
+  }
+  .galeriaa, .container-boton, .btn{
+    margin-top: 40px;
+  }
+  .galeriaa > .container-boton > .btn{
+    margin-top: 15px;
+  }
+  @media screen and (min-width: 601px) and 
+(max-width: 1024px){
+   .btn{
+    padding: 0.4em 1.4em;
+ 
+   }
+}
+/* Media Query para pantallas pequeñas */
+@media screen and (max-width: 600px){
+   .btn{
+    padding: 0.2em 1em;
+   }
+}
